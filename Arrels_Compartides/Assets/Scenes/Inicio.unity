@@ -491,7 +491,7 @@ MonoBehaviour:
   lines:
   - Viva la UJI
   - Me encanta la UJI
-  escena: SampleScene
+  escena: Minijuego1
   Retrato: {fileID: -3337722717584771317, guid: 8bede622368a6e84381c0da3b8fe8510, type: 3}
 --- !u!1 &854839518
 GameObject:
