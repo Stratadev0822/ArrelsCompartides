@@ -1,0 +1,28 @@
+using UnityEngine;
+
+public class Parallax :MonoBehaviour
+{
+    private float lenght, startposx;
+    public GameObject cam;
+    public float parallaxEffect;
+
+    private void Start()
+    {
+        startposx = transform.position.x;
+        lenght = GetComponent<SpriteRenderer>().bounds.size.x;
+
+    }
+
+    private void FixedUpdate()
+    {
+        float temp = (cam.transform.position.x * (1 - parallaxEffect));
+        float dist = (cam.transform.position.x * parallaxEffect);
+        transform.position = new Vector3(startposx + dist, transform.position.y, transform.position.z);
+
+        if (temp > startposx + lenght) 
+        { startposx += lenght; }
+        else if (temp < startposx - lenght)
+        { startposx -= lenght; }
+
+    }
+}
